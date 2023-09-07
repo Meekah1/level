@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "./Button";
 
 const messages = ["Learn React", "Apply for Jobs💼", "Invest Your Income 🤑"];
 
@@ -37,21 +38,23 @@ export default function App() {
           </p>
 
           <div className="buttons">
-            <button
-              style={{ backgroundColor: "#7950f2", color: "#fff" }}
+            <Button
+              bgColor= "#7950f2" textColor= "#fff"
               onClick={handlePrevious}
             >
-              Previous
-            </button>
-            <button
-              style={{ backgroundColor: "#7950f2", color: "#fff" }}
+             <span>👈</span> Previous
+            </Button>
+            <Button
+              bgColor= "#7950f2" textColor= "#fff"
               onClick={handleNext}
             >
-              Next
-            </button>
+             Next <span>👉</span> <span>🕺</span>
+            </Button>
           </div>
         </div>
       )}
     </>
   );
 }
+
+
