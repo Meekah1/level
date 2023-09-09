@@ -33,22 +33,22 @@ export default function App() {
             <div className={steps >= 3 ? "active" : ""}>3</div>
           </div>
 
-          <p className="message">
-            Step {steps}: {messages[steps - 1]}
-          </p>
+          <StepMessage steps={steps}>
+            {messages[steps - 1]}
+          </StepMessage>
 
           <div className="buttons">
             <Button
-              bgColor= "#7950f2" textColor= "#fff"
+              bgColor="#7950f2" textColor="#fff"
               onClick={handlePrevious}
             >
-             <span>👈</span> Previous
+              <span>👈</span> Previous
             </Button>
             <Button
-              bgColor= "#7950f2" textColor= "#fff"
+              bgColor="#7950f2" textColor="#fff"
               onClick={handleNext}
             >
-             Next <span>👉</span> <span>🕺</span>
+              Next <span>👉</span> <span>🕺</span>
             </Button>
           </div>
         </div>
@@ -57,4 +57,17 @@ export default function App() {
   );
 }
 
+// : 
 
+function StepMessage({ steps, children }) {
+
+  return (
+
+    <div className="message">
+      <h3>
+        Step {steps}
+      </h3>
+      {children}
+    </div>
+  )
+}
