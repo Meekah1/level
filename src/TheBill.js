@@ -24,6 +24,7 @@ export default function TheBill () {
 //  }
     return (
         <>
+        <h2>TIP CALCULATOR </h2>
         <div className="dir">
             <div>
          <label>How much was The Bill?</label>
